@@ -1,0 +1,80 @@
+<div class="container">
+
+<div class="row">
+    <div class="span6">
+    <h1>Authors</h1>
+<table class="table">
+<thead>
+    <th>
+	Id
+    </th>
+    <th>
+	Name
+    </th>
+</thead>
+<tbody>
+{{#each Em.App.authorsController}}
+<tr>
+    <td>
+    {{_id}}
+    </td>
+    <td>
+    {{name}}
+    </td>
+</tr>
+{{/each}}
+</tbody>
+</table>
+
+<form class="well form-inline">
+    {{view Ember.TextField valueBinding="newAuthor.name" placeholder="Author name" }}
+    <div class="btn" {{action createAuthor}}>Create</div>
+</form>
+
+    </div>
+    <div class="span6">
+    <h1>Posts</h1>
+<table class="table">
+<thead>
+    <th>
+	Id
+    </th>
+    <th>
+	Author
+    </th>
+    <th>
+	Title
+    </th>
+    <th>
+	Body
+    </th>
+    <th>
+	Created
+    </th>
+</thead>
+<tbody>
+{{#each Em.App.postsController}}
+<tr>
+    <td>
+    {{_id}}
+    </td>
+    <td>
+    {{author}}
+    </td>
+    <td>
+    {{title}}
+    </td>
+    <td>
+    {{body}}
+    </td>
+    <td>
+    {{created}}
+    </td>
+</tr>
+{{/each}}
+</tbody>
+</table>
+    </div>
+</div>
+
+</div>
