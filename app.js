@@ -1,8 +1,9 @@
+/*global console:false, __dirname:false, process:false */
 
 /**
  * Module dependencies.
  */
-
+	
 var requirejs = require('requirejs');
 
 requirejs.config({
@@ -18,6 +19,7 @@ requirejs([
 	mongoose,
 	api_authors
 ){
+	"use strict";
 
 	// connect to MongoDB
 	mongoose.connect('mongodb://localhost/example');
@@ -33,7 +35,7 @@ requirejs([
 
 	app.configure('development', function(){
 		app.use(express.logger('dev'));
-		app.use(express.static(__dirname + '/client'));
+		app.use(express['static'](__dirname + '/client'));
 		app.use(express.errorHandler({
 			dumpExceptions: true, 
 			showStack: true
@@ -41,7 +43,7 @@ requirejs([
 	});
 
 	app.configure('production', function(){
-		app.use(express.static(__dirname + '/client-build'));
+		app.use(express['static'](__dirname + '/client-build'));
 	});
 
 	// ROUTES

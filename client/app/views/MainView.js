@@ -1,3 +1,5 @@
+/*global console:false */
+
 define([
 	'lib/emberjs/load',
 	'app/model/Author',
@@ -9,6 +11,8 @@ define([
 	authorsController,
 	mainTemplateSource
 ){
+	"use strict";
+	
 	return em.View.extend({
 		template: em.Handlebars.compile(mainTemplateSource),
 
@@ -40,7 +44,7 @@ define([
 			
 			var authorName = this.newAuthor.get('name');
 			
-			if (authorName == undefined || authorName === null || authorName == '') {
+			if (authorName === undefined || authorName === null || authorName === '') {
 				em.$('#authorName').focus();
 				return;
 			}

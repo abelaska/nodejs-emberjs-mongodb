@@ -3,6 +3,8 @@ define([
 ],function(
     mongoose
 ){
+	"use strict";
+	
     var Schema = mongoose.Schema;
 
     var Author = new Schema({

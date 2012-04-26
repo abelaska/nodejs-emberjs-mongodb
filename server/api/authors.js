@@ -1,8 +1,12 @@
+/*global console:false */
+
 define([
 	'server/model/Author'
 ],function(
 	Author
 ){
+	"use strict";
+	
 	return {
 		remove: function(req, res) {
 			Author.findById(req.params.id, function (err, author) {

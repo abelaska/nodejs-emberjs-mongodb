@@ -3,6 +3,8 @@ define([
 ],function(
 	em
 ){
+	"use strict";
+	
 	return em.Object.extend({
 	});
 });

@@ -5,6 +5,8 @@ define([
 	Author,
 	BaseController
 ){
+	"use strict";
+	
 	return BaseController.create({
 
 		resourceType: Author,

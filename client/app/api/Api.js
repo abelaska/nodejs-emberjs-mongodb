@@ -1,8 +1,12 @@
+/*global console:false */
+
 define([
 	'lib/emberjs/load'
 ],function(
 	em
 ){
+	"use strict";
+	
 	return em.Object.extend({
 
 		baseUrl: '/api',
@@ -20,7 +24,7 @@ define([
 		},
 
 		_ajax: function(type, resourceUrl, data, onDone, onFail, onAlways) {
-			console.log('_'+type+'('+this.baseUrl + resourceUrl+')')
+			console.log('_'+type+'('+this.baseUrl + resourceUrl+')');
 			return em.$.ajax({
 				url: this.baseUrl + resourceUrl,
 				dataType: 'json',

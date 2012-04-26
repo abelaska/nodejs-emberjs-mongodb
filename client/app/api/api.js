@@ -3,5 +3,7 @@ define([
 ],function(
 	Api
 ){
+	"use strict";
+	
 	return Api.create({});
 });
