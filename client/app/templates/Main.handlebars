@@ -1,80 +1,42 @@
 <div class="container">
+	<div class="row">
+		<div class="span6">
+			<h1>nodejs-emberjs-mongodb</h1>
+			<p>Example application.</p>
+			<h3>Dependencies</h3>
+			<ul>
+				<li><a href="http://nodejs.org/">Node.js</a> 0.6.15</li>
+				<li><a href="http://requirejs.org/">Require.js</a> 1.0.8</li>
+				<li><a href="http://jquery.com/">jQuery</a> 1.7.2</li>
+				<li><a href="http://expressjs.com/">Express.js</a> 3.0.0alpha1</li>
+				<li><a href="http://mongoosejs.com/">Mongoose.js</a> 2.5.10</li>
+				<li><a href="http://www.mongodb.org/">MongoDB</a> 2.0.4</li>
+				<li><a href="http://emberjs.com/">Ember.js</a> 0.9.7.1</li>
+				<li><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> 2.0.3</li>
+			</ul>
+		</div>
+		<div class="span6">
+			<h1>Authors <div class="btn btn-mini" {{action refresh}}>Refresh</div></h1>
+			<table class="table">
+				<thead>
+				<th>Id</th>
+				<th>Name</th>
+				</thead>
+				<tbody>
+					{{#each Em.App.authorsController}}
+					<tr>
+						<td>{{_id}}</td>
+						<td>{{name}}</td>
+						<td><div class="btn btn-mini" {{action removeAuthor}}>remove</div></td>
+					</tr>
+					{{/each}}
+				</tbody>
+			</table>
 
-<div class="row">
-    <div class="span6">
-    <h1>Authors</h1>
-<table class="table">
-<thead>
-    <th>
-	Id
-    </th>
-    <th>
-	Name
-    </th>
-</thead>
-<tbody>
-{{#each Em.App.authorsController}}
-<tr>
-    <td>
-    {{_id}}
-    </td>
-    <td>
-    {{name}}
-    </td>
-</tr>
-{{/each}}
-</tbody>
-</table>
-
-<form class="well form-inline">
-    {{view Ember.TextField valueBinding="newAuthor.name" placeholder="Author name" }}
-    <div class="btn" {{action createAuthor}}>Create</div>
-</form>
-
-    </div>
-    <div class="span6">
-    <h1>Posts</h1>
-<table class="table">
-<thead>
-    <th>
-	Id
-    </th>
-    <th>
-	Author
-    </th>
-    <th>
-	Title
-    </th>
-    <th>
-	Body
-    </th>
-    <th>
-	Created
-    </th>
-</thead>
-<tbody>
-{{#each Em.App.postsController}}
-<tr>
-    <td>
-    {{_id}}
-    </td>
-    <td>
-    {{author}}
-    </td>
-    <td>
-    {{title}}
-    </td>
-    <td>
-    {{body}}
-    </td>
-    <td>
-    {{created}}
-    </td>
-</tr>
-{{/each}}
-</tbody>
-</table>
-    </div>
-</div>
-
+			<div class="well form-inline">
+				{{view Ember.TextField valueBinding="newAuthor.name" id="authorName" placeholder="New author name"}}
+				<div class="btn" {{action createAuthor}}>Create new author</div>
+			</div>
+		</div>
+	</div>
 </div>

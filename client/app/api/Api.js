@@ -11,16 +11,12 @@ define([
 			this._get('/authors', onDone, onFail);
 		},
 
-		getAllPosts: function(onDone, onFail) {
-			this._get('/posts', onDone, onFail);
+		removeAuthor: function(authorId, onDone, onFail) {
+			this._delete('/authors/'+authorId, null, onDone, onFail);
 		},
 
 		createAuthor: function(author, onDone, onFail) {
 			this._post('/authors', author, onDone, onFail);
-		},
-
-		createPost: function(post, onDone, onFail) {
-			this._post('/posts', post, onDone, onFail);
 		},
 
 		_ajax: function(type, resourceUrl, data, onDone, onFail, onAlways) {
