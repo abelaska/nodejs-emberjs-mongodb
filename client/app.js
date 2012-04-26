@@ -1,7 +1,5 @@
 require([
 	"app/core"
-],function(
-    app
-){
+],function(){
     console.log('Client application started');
 });

@@ -1,4 +1,5 @@
-db/mongodb-*/
-db/data/
+test/db/mongodb-*/
+test/db/data/
 node_modules/
 nbproject/
+client-build/

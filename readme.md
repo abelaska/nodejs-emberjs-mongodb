@@ -14,7 +14,7 @@ Example application.
 * [http://emberjs.com](http://emberjs.com) 0.9.7.1
 * [http://twitter.github.com/bootstrap](http://twitter.github.com/bootstrap) 2.0.3
 
-### How to run
+### How to run in development environment
 
 1. You have to start local MongoDB instance
 2. Install required Node.js modules
@@ -23,3 +23,13 @@ Example application.
    $ npm start
 4. Visit address http://localhost:3000
 5. Enjoy!
+
+### Build and run production package
+
+1. You have to start local MongoDB instance
+2. Install required Node.js modules
+   $ npm install
+3. Compile client application
+   $ node_modules/requirejs/bin/r.js -o client.build.js
+4. Start Node.js HTTP server in production environment
+   $ NODE_ENV=production node app

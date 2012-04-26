@@ -40,6 +40,10 @@ requirejs([
 		}));
 	});
 
+	app.configure('production', function(){
+		app.use(express.static(__dirname + '/client-build'));
+	});
+
 	// ROUTES
 	app.get('/api/authors', api_authors.getAll);
 	app.del('/api/authors/:id', api_authors.remove);
