@@ -1,7 +1,7 @@
 Node.js  + Ember.js + MongoDB
 =============================
 
-Example application.
+Proof of concept application.
 
 ### Dependencies:
 
@@ -18,11 +18,11 @@ Example application.
 
 1. You have to start local MongoDB instance
 2. Go to the project directory
-   $ cd nodejs-emberjs-mongodb
+   _$ cd nodejs-emberjs-mongodb_
 3. Install required Node.js modules
-   $ npm install
+   _$ npm install_
 4. Start Node.js HTTP server
-   $ npm start
+   _$ npm start_
 5. Visit address http://localhost:3000
 6. Enjoy!
 
@@ -30,10 +30,8 @@ Example application.
 
 1. You have to start local MongoDB instance
 2. Go to the project directory
-   $ cd nodejs-emberjs-mongodb
+   _$ cd nodejs-emberjs-mongodb_
 3. Install required Node.js modules
-   $ npm install
-4. Compile client application
-   $ node_modules/requirejs/bin/r.js -o client.build.js
-5. Start Node.js HTTP server in production environment
-   $ NODE_ENV=production node app
+   _$ npm install_
+4. Start Node.js HTTP server in production environment, client javascript and css files will be automatically optimized
+   _$ NODE_ENV=production node app_
