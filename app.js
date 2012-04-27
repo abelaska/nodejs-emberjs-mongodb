@@ -43,23 +43,12 @@ requirejs([
 	});
 
 	app.configure('production', function(){
-		console.log('Optimizing client...');
-		requirejs.optimize({
-			baseUrl: "client",
-			dir: "client-build",
-			optimize: "uglify",
-			inlineText: true,
-			paths: {
-				"jquery": "lib/requirejs/require-jquery"
-			},
-			modules: [{
-				name: "app",
-				exclude: ["jquery"]
-			}],
-			preserveLicenseComments: false
-		}, function() {
-			console.log('Client successfully optimized');
-		});
+		
+		// build client if directory client-build not found
+		var path = require('path');
+		if (!path.existsSync("client-build")) {
+			require('./build');
+		}
 		
 		app.use(express['static'](__dirname + '/client-build'));
 	});

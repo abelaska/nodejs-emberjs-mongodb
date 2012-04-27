@@ -18,20 +18,41 @@ Proof of concept application.
 
 1. You have to start local MongoDB instance
 2. Go to the project directory
-   _$ cd nodejs-emberjs-mongodb_
+
+        $ cd nodejs-emberjs-mongodb
+
 3. Install required Node.js modules
-   _$ npm install_
+
+        $ npm install
+
 4. Start Node.js HTTP server
-   _$ npm start_
-5. Visit address http://localhost:3000
+
+        $ npm start
+
+5. Visit address [http://localhost:3000](http://localhost:3000)
 6. Enjoy!
 
-### Build and run production package
+### Build and run production version
 
 1. You have to start local MongoDB instance
 2. Go to the project directory
-   _$ cd nodejs-emberjs-mongodb_
+
+        $ cd nodejs-emberjs-mongodb
+
 3. Install required Node.js modules
-   _$ npm install_
+
+        $ npm install
+
 4. Start Node.js HTTP server in production environment, client javascript and css files will be automatically optimized
-   _$ NODE_ENV=production node app_
+
+        $ NODE_ENV=production node app
+
+### Manual client build
+
+1. Go to the project directory
+
+        $ cd nodejs-emberjs-mongodb
+
+2. Build client
+
+        $ node build
