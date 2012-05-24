@@ -5,13 +5,13 @@ Proof of concept application.
 
 ### Dependencies:
 
-* [http://nodejs.org](http://nodejs.org) 0.6.15
+* [http://nodejs.org](http://nodejs.org) 0.6.x
 * [http://requirejs.org](http://requirejs.org) 1.0.x
-* [http://jquery.com](http://jquery.com) 1.7.2
 * [http://expressjs.com](http://expressjs.com) 3.0.x
 * [http://mongoosejs.com](http://mongoosejs.com) 2.5.x
-* [http://www.mongodb.org](http://www.mongodb.org) 2.0.4
-* [http://emberjs.com](http://emberjs.com) 0.9.7.1
+* [http://www.mongodb.org](http://www.mongodb.org) 2.0.x
+* [http://jquery.com](http://jquery.com) 1.7.2
+* [http://emberjs.com](http://emberjs.com) 0.9.8.1
 * [http://twitter.github.com/bootstrap](http://twitter.github.com/bootstrap) 2.0.3
 
 ### How to run in development environment
